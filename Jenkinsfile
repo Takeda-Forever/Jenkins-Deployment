@@ -3,8 +3,8 @@ pipeline {
     environment {
         REPO_URL = "https://github.com/Takeda-Forever/Jenkins-Deployment.git"
         BRANCH = "main"
-        DOCKER_IMAGE = "mynginx:latest"
-        CONTAINER_NAME = "mynginx-container"
+        DOCKER_IMAGE = "php:latest"
+        CONTAINER_NAME = "php-container"
     }
     stages {
         stage('Clone') {
