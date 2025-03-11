@@ -24,18 +24,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat "docker build -t ${DOCKER_IMAGE} ."
+                bat 'build_docker.bat'
             }
         }
         stage('Run') {
             steps {
-                script {
-                    bat """
-                    docker stop ${CONTAINER_NAME} || exit 0
-                    docker rm ${CONTAINER_NAME} || exit 0
-                    docker run -d --name ${CONTAINER_NAME} -p 8080:80 ${DOCKER_IMAGE}
-                    """
-                }
+                bat 'run_docker.bat'
             }
         }
     }
