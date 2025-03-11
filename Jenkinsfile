@@ -3,7 +3,7 @@ pipeline {
     environment {
         REPO_URL = "https://github.com/Takeda-Forever/Jenkins-Deployment.git"
         BRANCH = "main"
-        DOCKER_IMAGE = "php:latest"
+        DOCKER_IMAGE = "myphp:latest"
         CONTAINER_NAME = "php-container"
     }
     stages {
