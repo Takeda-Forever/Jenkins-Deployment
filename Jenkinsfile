@@ -12,6 +12,16 @@ pipeline {
                 git branch: "${BRANCH}", url: "${REPO_URL}"
             }
         }
+        stage('Init Check') {
+            steps {
+                bat 'init_check.bat'
+            }
+        }
+        stage('System Check') {
+            steps {
+                bat 'env_check.bat'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 bat "docker build -t ${DOCKER_IMAGE} ."
