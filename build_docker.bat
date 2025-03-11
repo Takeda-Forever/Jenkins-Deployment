@@ -1,1 +1,1 @@
-docker build -t php-microservice .
+docker build -t ${DOCKER_IMAGE} .
