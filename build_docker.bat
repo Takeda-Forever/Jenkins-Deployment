@@ -1,1 +1,1 @@
-docker build -t ${DOCKER_IMAGE} .
+docker build -t %DOCKER_IMAGE% .
