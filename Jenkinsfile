@@ -4,7 +4,7 @@ pipeline {
         REPO_URL = "https://github.com/Takeda-Forever/Jenkins-Deployment.git"
         BRANCH = "main"
         DOCKER_IMAGE = "myphp:latest"
-        CONTAINER_NAME = "php-container"
+        CONTAINER_NAME = "myphp-container"
         INTERNAL = "8080"
         EXPOSE = "80"
     }
