@@ -7,27 +7,27 @@ pipeline {
         CONTAINER_NAME = "mynginx-container"
     }
     stages {
-        stage('Clone Repository') {
+        stage('Clone') {
             steps {
                 git branch: "${BRANCH}", url: "${REPO_URL}"
             }
         }
-        stage('Init Check') {
+        stage('Pipe-Check') {
             steps {
                 bat 'init_check.bat'
             }
         }
-        stage('System Check') {
+        stage('System-Check') {
             steps {
                 bat 'env_check.bat'
             }
         }
-        stage('Build Docker Image') {
+        stage('Build') {
             steps {
                 bat "docker build -t ${DOCKER_IMAGE} ."
             }
         }
-        stage('Run Container') {
+        stage('Run') {
             steps {
                 script {
                     bat """
