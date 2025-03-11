@@ -5,6 +5,8 @@ pipeline {
         BRANCH = "main"
         DOCKER_IMAGE = "myphp:latest"
         CONTAINER_NAME = "php-container"
+        INTERNAL = "8080"
+        EXPOSE = "80"
     }
     stages {
         stage('Clone') {
